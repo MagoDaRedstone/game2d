@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    overflow: hidden;
+    font-family: monospace;
+}
+
+#matrix-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.draw-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 140px;
+    border: 3px solid #0f0;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    overflow: hidden;
+}
+
+#draw-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.editor {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.95);
+    border: 2px solid #0f0;
+    border-radius: 8px;
+    z-index: 2;
+    font-family: monospace;
+}
+
+.editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: rgba(0, 30, 0, 0.9);
+    border-bottom: 1px solid #0f0;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.auto-execute {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #0f0;
+    font-size: 12px;
+}
+
+.auto-execute input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #0f0;
+}
+
+textarea {
+    width: 100%;
+    height: 180px;
+    background: #000;
+    color: #0f0;
+    border: none;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 13px;
+    resize: vertical;
+    outline: none;
+}
+
+.buttons {
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+button {
+    background: #000;
+    color: #0f0;
+    border: 1px solid #0f0;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #0f0;
+    color: #000;
+}
+
+.info {
+    padding: 5px 10px;
+    color: #0f0;
+    font-size: 12px;
+    border-top: 1px solid #0f0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.coords {
+    position: absolute;
+    bottom: 294px;
+    right: 572px;
+    color: #0f0;
+    background: rgba(0,0,0,0.7);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    z-index: 3;
+    font-family: monospace;
+    pointer-events: none;
+}
+
+.warning {
+    color: #ff0;
+    font-size: 10px;
+}
+
+.bg-info {
+    color: #0f0;
+    font-size: 10px;
+    background: rgba(0,0,0,0.5);
+    padding: 2px 6px;
+    border-radius: 4px;
+}

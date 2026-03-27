@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Editor - Com Tamanho e Borda</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+
+<canvas id="matrix-canvas"></canvas>
+
+<div class="draw-container">
+    <canvas id="draw-canvas"></canvas>
+</div>
+
+<div class="editor">
+    <div class="editor-header">
+        <span style="color:#0f0;">📝 MATRIX EDITOR</span>
+        <div class="auto-execute">
+            <input type="checkbox" id="auto-execute" checked>
+            <label for="auto-execute">⚡ Executar automático enquanto digita</label>
+        </div>
+    </div>
+    <textarea id="code" spellcheck="false">clearObjectos();
+clearBackground();
+setBackground("https://raw.githubusercontent.com/MagoDaRedstone/textures/main/fundo2.png");
+
+const cube = new Cube(100, 400);
+cube.link("https://raw.githubusercontent.com/MagoDaRedstone/textures/main/player.png");
+cube.setSize(380);
+cube.setBorder(false);
+engine.create(cube);
+    </textarea>
+    <div class="buttons">
+        <button id="run">▶ EXECUTAR</button>
+        <button id="clear">🗑 clearObjectos()</button>
+    </div>
+    <div class="info">
+        <span id="info">📦 Objetos: 0</span>
+        <span id="bg-status" class="bg-info">🎨 Fundo: transparente (Matrix)</span>
+        <span class="warning">⚠️ Apenas links do GitHub para imagens</span>
+    </div>
+</div>
+<div class="coords" id="coords">🎯 x: 0, y: 0</div>
+
+<script src="src/game2d.js"></script>
+</body>
+</html>
